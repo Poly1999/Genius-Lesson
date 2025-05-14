@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -38,7 +46,14 @@
   --color-footer-light: #fff;
 }
 
-/* Base */
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Body */
 
 body {
   color: var(--color-primary-dark);
@@ -59,6 +74,7 @@ ul {
 }
 
 .button {
+  padding: 16px 32px;
   color: var(--color-primary-light);
   font-weight: 600;
   background-color: var(--color-brand-light);
@@ -85,6 +101,10 @@ ul {
 }
 
 /* Hero */
+
+.hero-section {
+  padding: 272px 0;
+}
 
 .hero-title {
   color: var(--color-primary-light);
@@ -121,7 +141,40 @@ ul {
   color: var(--color-brand-dark);
 }
 
+/* Sections */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.section {
+  padding: 48px 0;
+}
+
 /* Tradition section */
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.traditions-section {
+  padding-top: 96px;
+}
+
+.traditions-title {
+  margin-bottom: 42px;
+}
 
 .traditions-text span {
   text-transform: uppercase;
@@ -135,12 +188,21 @@ ul {
 
 /* Chef Section */
 
+.chefs-title {
+  margin-bottom: 80px;
+}
+
 .chef-title {
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
 }
 
 /* Formats section */
+
+.title-formats {
+  margin-bottom: 80px;
+}
 
 .formats-title {
   font-size: 44px;
@@ -150,6 +212,12 @@ ul {
 .formats-text {
   font-size: 14px;
   font-weight: 300;
+}
+
+/* Contacts */
+
+.contacts-title {
+  margin-bottom: 16px;
 }
 
 /* Footer */
