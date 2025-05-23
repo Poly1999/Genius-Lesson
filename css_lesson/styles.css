@@ -2,8 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 @font-face {
@@ -53,6 +51,10 @@
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+a {
+  display: inline-block;
 }
 
 /* Body */
@@ -257,6 +259,14 @@ p {
   max-width: 520px;
 }
 
+.chef-title {
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--color-primary-dark);
+}
+
 .chefs-title:before,
 .chefs-title:after {
   display: block;
@@ -264,6 +274,28 @@ p {
   height: 2px;
   border: 2px solid var(--color-brand-more-light);
   content: "";
+}
+
+.chefs-list {
+  display: flex;
+  gap: 40px 30px;
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chefs-item {
+  flex-basis: calc(100% - 30px / 2);
+}
+
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* Formats section */
@@ -300,23 +332,94 @@ p {
   );
 }
 
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+  fill: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 .formats-list {
   display: flex;
   gap: 20px;
 }
+
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
 /* Contacts */
+
+.contacts-section {
+  padding-bottom: 96px;
+}
 
 .contacts-title {
   margin-bottom: 16px;
 }
 
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
+.contact-map {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 16px;
+}
+
 /* Footer */
+
+.footer {
+  padding: 32px 0;
+}
+
+.adress-list,
+.adress-info {
+  flex-grow: 1;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-adress {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+}
 
 .adress-link {
   color: var(--color-primary-light);
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
+}
+
+.adress-icon {
+  fill: var(--color-primary-light);
 }
 
 .adress-link:hover {
