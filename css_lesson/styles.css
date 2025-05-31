@@ -43,7 +43,7 @@
   --color-brand-dark: #465929;
   --color-footer-light: #fff;
   --color-brand-more-light: #cfcfbc;
-  --color-dark-chefs: #a28268;
+  --color-dark-chefs: #a18268;
 }
 
 .container {
@@ -100,6 +100,7 @@ ul {
 .link {
   color: var(--color-primary-light);
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -110,7 +111,13 @@ ul {
 
 .hero-section {
   padding: 272px 0;
-  background-image: url("../images lessons/background-hero-section.jpg");
+  background-image: linear-gradient(
+      127deg,
+      rgba(18, 18, 17, 0.78) 0%,
+      rgba(18, 18, 17, 0.6) 63.89%,
+      rgba(18, 18, 17, 0) 100%
+    ),
+    url("../images lessons/background-hero-section.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -129,6 +136,14 @@ ul {
 }
 
 /* Header */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
+}
 
 .header-container {
   display: flex;
@@ -360,6 +375,10 @@ p {
   fill: var(--color-primary-light);
 }
 
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+
 .formats-list {
   display: flex;
   gap: 20px;
@@ -478,16 +497,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal {
-  position: relative;
-  width: 720px;
-  height: 680px;
-  background-color: var(--color-primary-light);
-
-  border-radius: 48px;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
@@ -496,8 +508,74 @@ p {
   pointer-events: none;
 }
 
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  padding: 128px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+  overflow-y: auto;
+}
+
 .modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+
+/* Form */
+
+.form-field {
+  margin-bottom: 32px;
+}
+
+.form-input {
+  padding: 16px 42px;
+  font-size: 16px;
+  line-height: 1.17;
+  width: 100%;
+  border: 1px solid var(--color-dark-chefs);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-light);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-dark-chefs);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-buttom {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.form-terms {
+  margin: 0 auto;
+  max-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
 }
