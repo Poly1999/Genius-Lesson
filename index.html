@@ -328,6 +328,8 @@
               id="user-name"
               name="user-name"
               placeholder="Ім’я"
+                 minlength="2"
+              required
             />
           </div>
           <div class="form-field">
@@ -338,6 +340,8 @@
               id="user-tel"
               name="user-tel"
               placeholder="Телефон"
+                pattern="^\+380\d{9}$"
+              required
             />
           </div>
           <div class="form-field">
@@ -350,6 +354,7 @@
               id="user-email"
               name="user-email"
               placeholder="Електронна пошта"
+              required
             />
           </div>
           <button class="form-buttom button" type="submit">
